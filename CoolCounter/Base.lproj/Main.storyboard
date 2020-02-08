@@ -17,16 +17,26 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVy-mb-jud">
                                 <rect key="frame" x="47" y="176.5" width="320" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="KgZ-S5-YHi"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Uy6-fV-FEz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="t7a-Im-Zdd"/>
+                                </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dw-PC-erQ">
-                                <rect key="frame" x="185.5" y="664.5" width="43" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dw-PC-erQ">
+                                <rect key="frame" x="172" y="659" width="70" height="41"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <state key="normal" title="CLICK"/>
+                                <connections>
+                                    <action selector="clickButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="7EN-fQ-Jnx"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4dw-PC-erQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MXx-vW-Gxz"/>
                             <constraint firstItem="4dw-PC-erQ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="SnG-ge-fkX"/>
@@ -35,6 +45,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="counterPickerView" destination="LVy-mb-jud" id="ZNh-qx-YYF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
