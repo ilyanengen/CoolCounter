@@ -26,9 +26,7 @@ class ViewController: UIViewController {
         
         let currentCount = String(count)
         
-        // TODO: Need to select from right side!
-        
-        let digits = currentCount.map { String($0) }
+        let digits = currentCount.map { String($0) }.reversed()
         
         for (index, digit) in digits.enumerated() {
             
