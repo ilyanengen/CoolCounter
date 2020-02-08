@@ -24,7 +24,16 @@ class ViewController: UIViewController {
         
         count += 1
         
-        counterPickerView.reloadAllComponents()
+        let currentCount = String(count)
+        
+        let digits = currentCount.map { String($0) }
+        
+        for (index, digit) in digits.enumerated() {
+            
+            let row = Int(digit)!
+            
+            counterPickerView.selectRow(row, inComponent: index, animated: true)
+        }
     }
 }
 
