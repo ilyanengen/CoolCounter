@@ -26,13 +26,19 @@ class ViewController: UIViewController {
         
         let currentCount = String(count)
         
+        // TODO: Need to select from right side!
+        
         let digits = currentCount.map { String($0) }
         
         for (index, digit) in digits.enumerated() {
             
             let row = Int(digit)!
+                    
+            let columnMaxIndex = 3
             
-            counterPickerView.selectRow(row, inComponent: index, animated: true)
+            let columnToUpdate = columnMaxIndex - index
+            
+            counterPickerView.selectRow(row, inComponent: columnToUpdate, animated: true)
         }
     }
 }
